@@ -1,0 +1,11 @@
+#服务消费方 (Service Consumer)
+#从Eureka获取注册服务列表，从而能够消费服务
+server:
+  port: 7001
+spring:
+  application:
+    name: demo-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

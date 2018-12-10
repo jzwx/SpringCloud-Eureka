@@ -1,0 +1,13 @@
+#服务提供方 (Service Provider2)
+#将自身服务注册到Eureka，从而使服务消费方能够找到
+server:
+  port: 9002
+spring:
+  application:
+    name: demo-provider
+
+# 把生产者注册到eureka注册中心去
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
